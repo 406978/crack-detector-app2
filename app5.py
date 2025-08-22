@@ -5,7 +5,7 @@ from PIL import Image
 import io
 
 # Secrets から API キーを取得
-API_KEY = st.secrets["thLVPRMwb08fXYlWxBB9"]
+API_KEY = st.secrets["ROBOFLOW_API_KEY"]
 
 # Roboflow 推論 API の正しい URL を構築
 # プロジェクト名とバージョンは Roboflow の Deploy タブから確認
