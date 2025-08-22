@@ -51,7 +51,7 @@ if uploaded_file is not None:
             bottom = y + height / 2
 
             # バウンディングボックスを描画
-            draw.rectangle([left, top, right, bottom], outline="red", width=2)
+            draw.rectangle([left, top, right, bottom], outline="red", width=8)
             draw.text((left, top - 10), f"{class_name}", fill="red")
 
             # 幅をmmに変換
