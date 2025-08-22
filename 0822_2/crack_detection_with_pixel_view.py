@@ -5,7 +5,6 @@ import requests
 import io
 import base64
 import numpy as np
-
 from streamlit_drawable_canvas import st_canvas
 
 PIXEL_TO_MM = 0.1
@@ -82,10 +81,18 @@ if uploaded_file is not None:
 
     # ピクセル値表示機能
     st.subheader("クリック位置のピクセルRGB値を表示")
+    def pil_to_base64_url(image):
+        buffered = io.BytesIO()
+        image.save(buffered, format="PNG")
+        img_str = base64.b64encode(buffered.getvalue()).decode()
+        return f"data:image/png;base64,{img_str}"
+
+    image_url = pil_to_base64_url(image)
+
     canvas_result = st_canvas(
         fill_color="rgba(255, 165, 0, 0.3)",
         stroke_width=1,
-        background_image=image,
+        background_image=image_url,
         update_streamlit=True,
         height=image.height,
         width=image.width,
