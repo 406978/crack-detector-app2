@@ -9,7 +9,7 @@ API_KEY = st.secrets["ROBOFLOW_API_KEY"]
 # Roboflow 推論 API の正しい URL を構築
 PROJECT_NAME = "-1121"  # あなたのプロジェクト名
 VERSION = "3"  # モデルのバージョン番号
-ROBOFLOW_API_URL = f"https://detect.roboflow.com/{PROJECT_NAME}/{VERSION}?api_key={API_KEY}"
+ROBOFLOW_API_URL = f"https://serverless.roboflow.com/{PROJECT_NAME}/{VERSION}?api_key={API_KEY}"
 
 st.title("ひび割れ検出アプリ")
 
