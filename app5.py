@@ -18,7 +18,7 @@ st.title("ひび割れ検出アプリ")
 uploaded_file = st.file_uploader("画像をアップロードしてください", type=["jpg", "jpeg", "png"])
 if uploaded_file is not None:
     image = Image.open(uploaded_file)
-    st.image(image, caption="アップロード画像", use_column_width=True)
+    st.image(image, caption="アップロード画像", use_container_width=True)
 
     buffered = io.BytesIO()
     image.save(buffered, format="JPEG")
