@@ -1,4 +1,4 @@
-
+# ライブラリのインポート
 import streamlit as st
 import requests
 from PIL import Image, ImageDraw
@@ -14,9 +14,9 @@ API_KEY = st.secrets["ROBOFLOW_API_KEY"]
 PROJECT_NAME = "-1121"
 VERSION = "3"
 ROBOFLOW_API_URL = f"https://outline.roboflow.com/{PROJECT_NAME}/{VERSION}?api_key={API_KEY}"
-
+# streamlit UIの構築
 st.title("ひび割れ検出アプリ（YOLOv8sモデル対応）")
-
+# 画像の読み込みと表示
 uploaded_file = st.file_uploader("画像をアップロードしてください", type=["jpg", "jpeg", "png"])
 if uploaded_file is not None:
     image = Image.open(uploaded_file).convert("RGB")
