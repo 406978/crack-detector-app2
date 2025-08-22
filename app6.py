@@ -61,3 +61,5 @@ if uploaded_file is not None:
         st.error("Roboflow APIの呼び出しに失敗しました。")
         st.text(f"ステータスコード: {response.status_code}")
         st.text(response.text)
+        st.text(f"マスクデータの先頭: {mask_data[:100]}")
+
