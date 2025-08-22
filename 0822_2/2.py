@@ -12,6 +12,17 @@ ROBOFLOW_API_URL = f"https://outline.roboflow.com/{PROJECT_NAME}/{VERSION}?api_k
 
 st.title("ひび割れ検出アプリ（セグメンテーション対応）")
 
+st.markdown(
+    """
+    <style>
+    body {
+        background-color: #98FF98; /* Mint Green */
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 confidence_threshold = st.slider(
     "信頼度の閾値を選択してください（低いほど多く検出されます）",
     min_value=0.0,
