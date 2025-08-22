@@ -27,6 +27,14 @@ confidence_threshold = st.slider(
 uploaded_file = st.file_uploader("画像をアップロードしてください", type=["jpg", "jpeg", "png"])
 if uploaded_file is not None:
     image = Image.open(uploaded_file).convert("RGB")
+
+    # 画像サイズが大きすぎる場合はリサイズ（最大幅800px）
+    max_width = 800
+    if image.width > max_width:
+        ratio = max_width / image.width
+        new_size = (max_width, int(image.height * ratio))
+        image = image.resize(new_size)
+
     st.image(image, caption="アップロード画像", use_container_width=True)
 
     # Roboflow API 呼び出し
