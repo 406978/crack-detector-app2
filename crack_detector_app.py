@@ -13,7 +13,7 @@ API_KEY = st.secrets["ROBOFLOW_API_KEY"]
 # Roboflow 推論 API の URL（YOLOv8sモデル）
 PROJECT_NAME = "-1121"
 VERSION = "3"
-ROBOFLOW_API_URL = f"https://detect.roboflow.com/{PROJECT_NAME}/{VERSION}?api_key={API_KEY}"
+ROBOFLOW_API_URL = f"https://outline.roboflow.com/{PROJECT_NAME}/{VERSION}?api_key={API_KEY}"
 
 st.title("ひび割れ検出アプリ（YOLOv8sモデル対応）")
 
